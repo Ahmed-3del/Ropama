@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, Aref_Ruqaa, Caveat, IBM_Plex_Sans_Arabic, Instrument_Serif } from "next/font/google";
 import { site } from "@/config/site";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { CartDrawer } from "@/components/layout/CartDrawer";
 import { Providers } from "@/components/layout/Providers";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#031904" };
+// viewport-fit=cover exposes the iPhone safe-area insets the bottom nav pads against.
+export const viewport: Viewport = { themeColor: "#031904", viewportFit: "cover" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -48,6 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <SiteFooter />
+          <BottomNav />
           <CartDrawer />
         </Providers>
       </body>

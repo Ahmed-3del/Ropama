@@ -183,7 +183,7 @@ export function SiteHeader() {
 
 function IconButton({ label, onClick, children, badge }: { label: string; onClick: () => void; children: React.ReactNode; badge?: React.ReactNode }) {
   return (
-    <button type="button" onClick={onClick} aria-label={label} className="relative flex h-11 w-11 items-center justify-center rounded-full transition-colors hover:bg-paper/10">
+    <button type="button" onClick={onClick} aria-label={label} className="relative hidden h-11 w-11 items-center justify-center rounded-full transition-colors hover:bg-paper/10 lg:flex">
       <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         {children}
       </svg>

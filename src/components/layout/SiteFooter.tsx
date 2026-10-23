@@ -86,7 +86,8 @@ export function SiteFooter() {
         </p>
       </div>
 
-      <div className="border-t border-paper/10">
+      {/* Extra bottom padding on mobile keeps this clear of the bottom nav, in footer green. */}
+      <div className="border-t border-paper/10 pb-[calc(5.5rem+env(safe-area-inset-bottom))] lg:pb-0">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {site.name} <span lang="ar">{site.nameAr}</span> · Plaza Mall, {site.city}
