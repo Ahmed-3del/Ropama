@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rbma – ربما · Website
 
-## Getting Started
+Website for **Rbma – ربما**, a café and coffee bean shop on the first floor of Plaza Mall, Aswan. "It's coffee time."
 
-First, run the development server:
+The design is built on Rbma's own identity. It uses the green and amber logo, and the scrapbook look of Rbma's printed menu: ruled notebook paper, kraft paper, luggage tags, washi tape and hand-drawn sketches. It also uses the menu's line, "I haven't fallen in love until now… but maybe".
+
+Built with Next.js 16, TypeScript, Tailwind CSS v4 and Motion.
+
+## Pages
+
+- **Home:** notebook-page hero, a "Maybe…" line that changes word every few seconds, menu tags, the blend builder, guest reviews, and a "Find us" receipt with live opening hours.
+- **Menu** (`/menu`): every menu section as a luggage tag.
+- **Coffee Beans** (`/beans`): the "Build your توليفة" builder. Customers pick roast, spice, grind and size, can name their blend, and add it to an order.
+- **About**, **Visit Us**, **Contact**.
+
+There's no online payment. The order bag builds a message the customer copies and sends on Messenger, or they call. WhatsApp sending turns on once a number is set.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev                  # http://localhost:3000
+npm run build && npm start   # production
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Set `NEXT_PUBLIC_SITE_URL=https://your-domain` in production for canonical URLs and sharing previews.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Edit the content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | File |
+| --- | --- |
+| Name, phone, address, hours, ratings, reviews, announcements, WhatsApp/Instagram | `src/config/site.ts` |
+| Café menu: sections, items, optional prices | `src/data/menu.ts` |
+| Blend builder choices: roasts, spices, grinds, sizes | `src/data/blend.ts` |
+| Hand-drawn sketches | `src/components/sketch/sketches.ts` |
+| Colours and fonts | `src/app/globals.css` |
 
-## Learn More
+To show a price, add `price: 45` (in EGP) to a menu item.
 
-To learn more about Next.js, take a look at the following resources:
+## Sources
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Facebook page** (facebook.com/RbmaASW): name, logo, Arabic slogan, location, follower count.
+- **Rbma's printed menu**, from a customer photo: the menu line, the mojito and milkshake items, the smoothie section, the address and the phone number.
+- **Rbma's Facebook post** "تحلى الأوقات مع لاتيه ربما": the Latte.
+- **Google listing** (via Restaurant Guru): opening hours, 4.7★ from 171 reviews, takeaway and delivery, and the two quoted guest reviews.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Still to confirm with Rbma
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The full menu, including the coffee list, and prices.
+- The blend builder choices in `src/data/blend.ts` are the usual Egyptian coffee-shop options, not taken from Rbma.
+- Whether +20 109 791 9899 is on WhatsApp. If it is, set `contact.whatsapp`.
+- Photos of the café and drinks. None are used, because the only ones online belong to customers.
+- Instagram account, if there is one.
