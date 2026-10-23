@@ -51,3 +51,4 @@ To show a price, add `price: 45` (in EGP) to a menu item.
 - Whether +20 109 791 9899 is on WhatsApp. If it is, set `contact.whatsapp`.
 - Photos of the café and drinks. None are used, because the only ones online belong to customers.
 - Instagram account, if there is one.
+# Ropama
