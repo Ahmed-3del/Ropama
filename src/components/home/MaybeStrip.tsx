@@ -1,4 +1,4 @@
-const phrases = ["maybe a latte", "ربما", "maybe a mojito", "it’s coffee time", "maybe your own blend", "ربما", "maybe a milkshake", "مزاجك مظبوط"];
+const phrases = ["maybe a latte", "ربما", "maybe a mojito", "it’s coffee time", "maybe a house blend", "ربما", "maybe a milkshake", "مزاجك مظبوط"];
 
 /** Hand-written ribbon of "maybe"s on ruled paper. Pauses on hover; static for reduced motion. */
 export function MaybeStrip() {

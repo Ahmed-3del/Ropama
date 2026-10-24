@@ -29,7 +29,7 @@ export function SiteFooter() {
           </FooterColumn>
 
           <FooterColumn title="Menu" className="md:col-span-2">
-            {menu.map((s) => (
+            {menu.slice(0, 7).map((s) => (
               <li key={s.slug}>
                 <Link href={`/menu#${s.slug}`} className="link-underline">
                   {s.title}

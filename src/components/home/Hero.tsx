@@ -34,7 +34,7 @@ export function Hero() {
 
           <FadeIn delay={0.85}>
             <p className="mt-8 font-hand text-[clamp(1.9rem,3.6vw,2.8rem)] leading-none text-paper/90">
-              <MaybeTicker words={["a latte.", "a mojito.", "your own blend.", "a long sit.", "today."]} />
+              <MaybeTicker words={["a latte.", "a mojito.", "a house blend.", "a long sit.", "today."]} />
             </p>
             <p lang="ar" dir="rtl" className="mt-6 max-w-md text-left text-lg text-paper/55">
               {site.sloganAr}
@@ -44,7 +44,7 @@ export function Hero() {
           <FadeIn delay={1} className="mt-10 flex flex-wrap gap-3">
             <ButtonLink href="/menu">See the menu</ButtonLink>
             <ButtonLink href="/beans" variant="outline-light" arrow={false}>
-              Build your blend
+              Shop coffee beans
             </ButtonLink>
           </FadeIn>
         </div>
@@ -55,7 +55,10 @@ export function Hero() {
               <Tape className="-top-3 left-10 -rotate-6" />
               <Tape className="-top-3 right-12 rotate-3" />
 
-              <HandwrittenLine text={site.menuLine} className="font-hand text-[clamp(1.6rem,3.4vw,2.3rem)] leading-[2rem] text-forest-900" />
+              <HandwrittenLine text={site.menuLine} className="font-hand text-[clamp(1.6rem,3.4vw,2.3rem)] leading-8 text-forest-900" />
+              <p lang="ar" dir="rtl" className="mt-2 font-arabic-display text-2xl leading-8 text-forest-900/70">
+                {site.menuLineAr}
+              </p>
 
               <div className="relative mt-6 grid grid-cols-[1fr_auto] items-end gap-4">
                 <Sketch name="cup" className="w-full max-w-[15rem] text-cocoa" delay={1.4} strokeWidth={2.2} />

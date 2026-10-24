@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const pillars: { sketch: SketchName; title: string; body: string; href: string; cta: string }[] = [
   { sketch: "latte", title: "The café", body: "A latte, a mojito or a milkshake at Plaza Mall — stay a while.", href: "/menu", cta: "See the menu" },
-  { sketch: "beans", title: "The beans", body: "Coffee to take home, blended the way you like it.", href: "/beans", cta: "Build your blend" },
+  { sketch: "beans", title: "The beans", body: "Six house blends and a full bean list to take home — plain or spiced.", href: "/beans", cta: "Shop coffee beans" },
   { sketch: "heart", title: "The people", body: "Guests keep mentioning the same thing: how warm the welcome is.", href: "/visit", cta: "Come say hi" },
 ];
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
         </MaskReveal>
         <div className="lg:col-span-7 lg:col-start-6">
           <h2 className="font-display text-[clamp(2.4rem,5vw,4.4rem)] leading-[0.95]">
-            <SplitWords text="Maybe a quick cup. Maybe a long sit. Maybe a blend to take home." />
+            <SplitWords text="Maybe a quick cup. Maybe a long sit. Maybe a house blend to take home." />
           </h2>
           <Reveal delay={0.1}>
             <p className="mt-8 text-lg leading-relaxed text-ink-soft">

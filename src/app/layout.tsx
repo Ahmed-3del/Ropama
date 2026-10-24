@@ -15,7 +15,7 @@ const ruqaa = Aref_Ruqaa({ variable: "--font-ruqaa", subsets: ["arabic"], weight
 const plexArabic = IBM_Plex_Sans_Arabic({ variable: "--font-plex-arabic", subsets: ["arabic"], weight: ["400", "500"] });
 const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"], weight: ["500", "700"] });
 
-const description = `${site.legalName} — café and coffee bean shop at Plaza Mall, ${site.city}. Lattes, mojitos, milkshakes, and coffee beans blended your way. ${site.tagline}.`;
+const description = `${site.legalName} — café and coffee bean shop at Plaza Mall, ${site.city}. Turkish & Italian coffee, mojitos, milkshakes, breakfast — and six house coffee blends to take home. ${site.tagline}.`;
 
 export const metadata: Metadata = {
   metadataBase: site.url ? new URL(site.url) : undefined,

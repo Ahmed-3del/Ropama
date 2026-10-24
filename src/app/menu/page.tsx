@@ -10,7 +10,7 @@ import { HandwrittenLine } from "@/components/home/HeroMotion";
 
 export const metadata: Metadata = {
   title: "Menu",
-  description: `The ${site.legalName} menu at Plaza Mall, ${site.city}: latte, mojitos, milkshakes and smoothies.`,
+  description: `The ${site.legalName} menu at Plaza Mall, ${site.city}: Turkish and Italian coffee, iced coffee, mojitos, smoothies, milkshakes, breakfast sandwiches and sweets.`,
   alternates: site.url ? { canonical: "/menu" } : undefined,
 };
 
@@ -24,7 +24,10 @@ export default function MenuPage() {
         <NotebookPage holes="left" holeColor="bg-kraft" className="mx-auto max-w-3xl -rotate-1 px-10 pb-12 pt-14 sm:pl-24">
           <Tape className="-top-3 right-16 rotate-6" />
           <h1 className="sr-only">Menu — {site.legalName}</h1>
-          <HandwrittenLine text={site.menuLine} delay={0.3} className="font-hand text-[clamp(1.8rem,4vw,2.6rem)] leading-[2rem] text-forest-900" />
+          <HandwrittenLine text={site.menuLine} delay={0.3} className="font-hand text-[clamp(1.8rem,4vw,2.6rem)] leading-8 text-forest-900" />
+          <p lang="ar" dir="rtl" className="mt-2 font-arabic-display text-2xl leading-8 text-forest-900/70">
+            {site.menuLineAr}
+          </p>
           <div className="mt-8 flex items-end justify-between gap-6">
             <Sketch name="cup" className="w-40 text-cocoa sm:w-56" delay={0.8} />
             <div className="text-right">
@@ -49,9 +52,10 @@ export default function MenuPage() {
         </nav>
       </section>
 
-      <section className="container-x mt-16 grid gap-x-8 gap-y-14 md:grid-cols-2">
+      {/* Masonry columns so tags of different lengths pack like a pinboard. */}
+      <section className="container-x mt-16 gap-10 md:columns-2">
         {menu.map((section, i) => (
-          <Reveal key={section.slug} delay={(i % 2) * 0.1} className={i % 2 ? "md:mt-20" : ""}>
+          <Reveal key={section.slug} delay={(i % 2) * 0.1} className="mb-14 break-inside-avoid">
             <div id={section.slug} className={`scroll-mt-28 ${tilts[i % tilts.length]}`}>
               <MenuTag section={section} />
             </div>
@@ -63,7 +67,7 @@ export default function MenuPage() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-hand text-4xl font-bold text-forest-900">Hungry for more?</p>
           <p className="mt-3">
-            Ask for the full menu in the café. For takeaway or delivery, call us on <a href={`tel:${site.contact.phone}`} className="font-semibold underline underline-offset-4">{site.contact.phoneDisplay}</a>.
+            For takeaway or delivery, call us on <a href={`tel:${site.contact.phone}`} className="font-semibold underline underline-offset-4">{site.contact.phoneDisplay}</a>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <ButtonLink href="/beans" variant="dark">

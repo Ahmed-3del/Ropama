@@ -80,7 +80,7 @@ export function CartDrawer() {
                 <Sketch name="kanaka" className="w-32 text-forest-900/40" />
                 <p className="font-hand text-3xl text-forest-900">Nothing here yet… but maybe.</p>
                 <Link href="/beans" onClick={onClose} className="inline-flex min-h-12 items-center rounded-full bg-forest-900 px-7 text-sm font-semibold text-paper hover:bg-forest-700">
-                  Build your blend
+                  Shop coffee beans
                 </Link>
               </div>
             ) : step === "bag" ? (

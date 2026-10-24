@@ -16,6 +16,7 @@ export const site = {
   tagline: "It’s coffee time",
   /** The line printed on the cover of Rbma's menu. */
   menuLine: "I haven’t fallen in love until now… but maybe",
+  menuLineAr: "أنا لم أعشقكِ حتى الآن، لكنْ ربما..",
   sloganAr: "مزاجك مظبوط مع توليفة من أجود وأفضل أنواع البن المختلفة",
   slogan: "Your mood, set just right — with a blend of the finest coffees.",
   city: "Aswan",
@@ -83,7 +84,7 @@ export const site = {
 
   announcements: [
     "It’s coffee time — open daily at Plaza Mall, Aswan",
-    "Build your own coffee blend and order it by message",
+    "Six house blends, plain or spiced — order beans by message",
     "Takeaway & delivery: +20 109 791 9899",
   ],
 

@@ -107,7 +107,7 @@ export function SiteHeader() {
               href="/beans"
               className="ml-2 hidden min-h-10 items-center rounded-full bg-amber-500 px-5 text-[0.8rem] font-semibold text-forest-900 transition-colors hover:bg-amber-400 md:inline-flex"
             >
-              Build your blend
+              Coffee beans
             </Link>
             <button
               type="button"
@@ -163,7 +163,7 @@ export function SiteHeader() {
                 </ul>
                 <div className="mt-10 flex flex-col gap-3">
                   <Link href="/beans" className="flex min-h-12 items-center justify-center rounded-full bg-amber-500 font-semibold text-forest-900">
-                    Build your blend
+                    Coffee beans
                   </Link>
                   <a href={site.contact.messenger} target="_blank" rel="noopener noreferrer" className="flex min-h-12 items-center justify-center rounded-full border border-paper/30 text-paper">
                     Message us

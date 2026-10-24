@@ -102,9 +102,9 @@ export function BottomNav() {
         {tab(links[0].href, links[0].label, links[0].icon)}
         {tab(links[1].href, links[1].label, links[1].icon)}
 
-        {/* Raised centre action: the blend builder. */}
+        {/* Raised centre action: the coffee bean shop. */}
         <div className="flex flex-1 justify-center">
-          <Link href="/beans" aria-current={blendActive ? "page" : undefined} className="group -mt-6 flex flex-col items-center gap-1 pb-2" aria-label="Build your blend">
+          <Link href="/beans" aria-current={blendActive ? "page" : undefined} className="group -mt-6 flex flex-col items-center gap-1 pb-2" aria-label="Coffee beans">
             <span
               className={cn(
                 "flex h-14 w-14 items-center justify-center rounded-full border-4 border-paper bg-amber-500 text-forest-900 shadow-lg transition-transform duration-300 group-active:scale-90",
@@ -118,7 +118,7 @@ export function BottomNav() {
                 <path d="M14.7 7.4c1.6 2.4-1 6.6.6 9.2" transform="rotate(20 15.5 12)" />
               </svg>
             </span>
-            <span className="font-hand text-base font-bold leading-none text-amber-500">Blend</span>
+            <span className="font-hand text-base font-bold leading-none text-amber-500">Beans</span>
           </Link>
         </div>
 

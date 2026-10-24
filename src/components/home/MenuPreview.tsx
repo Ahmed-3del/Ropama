@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { menu } from "@/data/menu";
+import { featuredMenu, menu } from "@/data/menu";
 import { MenuTag } from "@/components/menu/MenuTag";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/primitives";
 import { ButtonLink } from "@/components/ui/Button";
@@ -33,7 +33,7 @@ export function MenuPreview() {
         </div>
 
         <Stagger className="mt-16 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {menu.map((section, i) => (
+          {menu.filter((s) => featuredMenu.includes(s.slug)).map((section, i) => (
             <StaggerItem key={section.slug}>
               <Link href={`/menu#${section.slug}`} className={`block h-full transition-transform duration-500 ease-out-expo hover:-translate-y-2 hover:rotate-0 ${tilts[i % tilts.length]}`}>
                 <MenuTag section={section} compact />
